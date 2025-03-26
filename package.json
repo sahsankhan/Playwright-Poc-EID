@@ -1,0 +1,26 @@
+{
+  "name": "playwright-cucumber-e2e-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(npx rimraf ./reports/cucumber_report.json ./reports/cucumber_report.html) && (npx cucumber-js --require cucumber.js --require step-definitions/**/*.js --require features/**/*.js --tags @run --format json:./reports/cucumber_report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet) && (node reporter.js)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.2",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.0",
+    "chai": "^4.2.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "playwright": "^1.49.1",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.7",
+    "playwright-cucumber-e2e-boilerplate": "file:"
+  }
+}
