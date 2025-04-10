@@ -1,6 +1,6 @@
 Feature:EIDPerson
 
-    @run
+    # @run
     Scenario: I should be able to onboard a person
         Given I visit EmpowerID
         When I enter valid username and password on login page
@@ -20,7 +20,7 @@ Feature:EIDPerson
         And I press 'Submit' button
         Then I should see 'Create Person Test Person in Temporary Role in Default Organization was executed successfully.' success message on Person page
 
-    # @run
+    @run
     Scenario: I should be able to search application on Resadmin Page
         Given I visit ResAdmin
         When I enter valid username and password on login page
